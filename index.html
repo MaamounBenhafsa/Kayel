@@ -109,7 +109,7 @@ function setSelection(shape) {
 
 function calcar() {
     var area = google.maps.geometry.spherical.computeArea(selectedShape.getPath());
-    document.getElementById("area").innerHTML = '<div class="chip text-rose">Selected Ground   =' + area/10000+' Ha</div>';
+    document.getElementById("area").innerHTML = '<div class="chip text-rose">Selected Ground   =' + area%10000+' Ha</div>';
 }
 
 function deleteSelectedShape() {
@@ -211,7 +211,7 @@ function initialize() {
         setSelection(newShape);
       });
       var area = google.maps.geometry.spherical.computeArea(newShape.getPath());
-      document.getElementById("area").innerHTML = '<div class="chip text-rose">Selected Ground =' + area/10000+' Ha</div>';
+      document.getElementById("area").innerHTML = '<div class="chip text-rose">Selected Ground =' + area%10000+' Ha</div>';
       setSelection(newShape);
     }
   });
