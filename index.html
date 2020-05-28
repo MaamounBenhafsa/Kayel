@@ -130,7 +130,13 @@ function selectColor(color) {
   var polylineOptions = drawingManager.get('polylineOptions');
   polylineOptions.strokeColor = color;
   drawingManager.set('polylineOptions', polylineOptions);
+    var rectangleOptions = drawingManager.get('rectangleOptions');
+  rectangleOptions.fillColor = color;
+  drawingManager.set('rectangleOptions', rectangleOptions);
 
+  var circleOptions = drawingManager.get('circleOptions');
+  circleOptions.fillColor = color;
+  drawingManager.set('circleOptions', circleOptions);
 
   var polygonOptions = drawingManager.get('polygonOptions');
   polygonOptions.fillColor = color;
